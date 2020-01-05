@@ -57,5 +57,19 @@ int port_no = 27017;
         DB database = mongoClient.getDB("ProjectDB");
 MongoCollection<Document> coll=db.getCollection(db_coll_name);
 ```
+![](https://i.imgur.com/u0VHhPj.jpg)
+
+
+>Login Form [color=#fd837b]
+
+![](https://i.imgur.com/Sn6DxE7.jpg)
+>Creating an account form [color=#fd837b]
+
+![](https://i.imgur.com/NPMguLw.jpg)
+>Adding an exercise form [color=#fd837b]
+
+![](https://i.imgur.com/EhEKD5o.jpg)
+>Latex Generating form [color=#fd837b]
+---
 > Created by :[name=LAFRYHI YASSINE ELMAJNI KHAOULA IMANE LAHLOU]
 [time=sun,2020,01,04][color=#EF0101]
