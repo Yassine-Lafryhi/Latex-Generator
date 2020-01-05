@@ -19,14 +19,14 @@ class AddExercise extends PolymerElement {
   
        <h1 style="text-align:center">Add Exercise</h1>
        <vaadin-form-layout style="text-align:center">
-       <vaadin-combo-box id="combo" allow-custom-value>
+       
+       <vaadin-combo-box  label="Please select the school subject :"  id="combo" allow-custom-value>
        
 </vaadin-combo-box>
         <br>
      <div theme="padding" style="text-align:center">
-       <h1 style="text-align:center">Choose a level</h1>
        <vaadin-form-layout style="text-align:center">
-       <vaadin-combo-box  id="combobox" allow-custom-value>
+       <vaadin-combo-box label="Please select the exercise difficulty :"  id="combobox" allow-custom-value>
        
 </vaadin-combo-box>
         <br>
@@ -36,18 +36,11 @@ class AddExercise extends PolymerElement {
   }
 </style>
  <br>
-<vaadin-text-area class="min-height" id="textarea" label="Description" placeholder="Write here ...">
+<vaadin-text-area class="min-height" id="textarea" label="Please enter the exercise content :" placeholder="Write here ...">
 </vaadin-text-area>
-       </vaadin-form-layout>
-       <vaadin-horizontal-layout theme="spacing" style="display:flex;flex-wrap:wrap-reverse;width:100%;justify-content:flex-end;">
-        <vaadin-button theme="tertiary" id="cancel" slot="" style="text-align:center">
-          Cancel
-        </vaadin-button>
-        <vaadin-button theme="primary" id="add" style="text-align:center">
-          Add
-        </vaadin-button>
-       </vaadin-horizontal-layout>
       
+         <vaadin-button id="Add" theme="success primary">Add</vaadin-button>
+       </vaadin-form-layout>
       </vaadin-vertical-layout> 
       </vaadin-vertical-layout>
      
@@ -59,7 +52,7 @@ class AddExercise extends PolymerElement {
     align-items: center;
     justify-content: center;
     width: 40em;
-    height: 40em;
+    height: 30em;
     border-radius: var(--lumo-border-radius);
     box-shadow: var(--lumo-box-shadow-s);
     padding: var(--lumo-space-s);

@@ -6,6 +6,8 @@ import java.util.Optional;
 import java.util.prefs.Preferences;
 
 import com.latex.generator.backend.Database;
+import com.latex.generator.views.AddExercise.AddExercise;
+import com.latex.generator.views.LatexGenerator.LatexGenerator;
 import com.latex.generator.views.TeacherInformations.TeacherInformations;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
@@ -121,9 +123,9 @@ public class MainView extends AppLayout {
 
     private static Tab[] getAvailableTabs() {
         final List<Tab> tabs = new ArrayList<>();
-        tabs.add(createTab("Teacher Informations", TeacherInformations.class));
-        tabs.add(createTab("Latex Generator", LatexGenerator.class));
-        tabs.add(createTab("Add Exercice", AddExercise.class));
+        tabs.add(createTab("1- Teacher Informations", TeacherInformations.class));
+        tabs.add(createTab("2- Add Exercise", AddExercise.class));
+        tabs.add(createTab("3- Latex Generator", LatexGenerator.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 

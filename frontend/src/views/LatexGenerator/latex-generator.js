@@ -11,65 +11,58 @@ import '@vaadin/vaadin-ordered-layout/vaadin-vertical-layout.js';
 class LatexGenerator extends PolymerElement {
     static get template() {
         return html`
-<center>
-<div class="content">
-      <custom-style>
-        <style include="shared-styles">
-          :host {
-              display: block;
-              padding: 1rem;
-          }
-          .content {
-  max-width: 500px;
-  margin: auto;
-        </style>
-      </custom-style>
+ <vaadin-vertical-layout theme="padding" id="all">
 
-      <vaadin-vertical-layout id="wrapper" theme="padding" style="text-align:center">
-       <h1 style="text-align:center">Add Exercise</h1>
+      <vaadin-vertical-layout id="wrapper" theme="padding" class="block">
+       <h2 style="text-align:center">Latex Generator</h2>
        <vaadin-form-layout style="text-align:center">
-       <vaadin-combo-box id="combo" allow-custom-value>
-       
-</vaadin-combo-box>
-        <br>
-        <vaadin-combo-box id="combobox" allow-custom-value>
-       
-</vaadin-combo-box>
-<br>
-<vaadin-text-field label="Easy"></vaadin-text-field>
-<vaadin-combo-box id="easy" allow-custom-value>
-       
-</vaadin-combo-box>
-<br>
-<vaadin-text-field label="Medium"></vaadin-text-field>
-<vaadin-combo-box id="medium" allow-custom-value>
-       
-</vaadin-combo-box>
-<br>
-<vaadin-text-field label="difficult" value=""></vaadin-text-field>
-<vaadin-combo-box id="difficult" allow-custom-value>
-       
+
+    <vaadin-combo-box  label="Please select the school subject :"  id="combo" allow-custom-value></vaadin-combo-box>
+    
+     <vaadin-combo-box  label="Please select the test type :"  id="combobox" allow-custom-value></vaadin-combo-box>
+
+<vaadin-integer-field id="easy" min="0" max="10" label="How many easy exercises do you want :" has-controls></vaadin-integer-field>
+<vaadin-integer-field id="medium" min="0" max="10" label="How many medium exercises do you want :" has-controls></vaadin-integer-field>
+<vaadin-integer-field id="difficult" min="0" max="10" label="How many difficult exercises do you want :" has-controls></vaadin-integer-field>
 </vaadin-combo-box>
 
- <br>
  
- <vaadin-text-field autoselect label="niveau" value="" id="niveau"></vaadin-text-field>
- <br>
-  <vaadin-text-field autoselect label="duree" value=""id="duree"></vaadin-text-field>
- <br>
+ <vaadin-text-field autoselect label="Please select the grade :" value="" id="niveau"></vaadin-text-field>
+
+  <vaadin-text-field autoselect label="Please select the test duration :" value="" id="duree"></vaadin-text-field>
+
+
+  <vaadin-button id="GeneratePDF" theme="error primary">Generate PDF File</vaadin-button>
+  
+  
+    <vaadin-button id="GenerateLATEX" theme="success primary">Generate LATEX File</vaadin-button>
+
+
        </vaadin-form-layout>
-       <vaadin-horizontal-layout theme="spacing" style="display:flex;flex-wrap:wrap-reverse;width:100%;justify-content:flex-end;">
-        <vaadin-button theme="tertiary" id="Pdf" slot="" style="text-align:center">
-         GeneratePDF
-        </vaadin-button>
-        <vaadin-button theme="primary" id="Latex" style="text-align:center">
-         GenerateLatex
-        </vaadin-button>
-       </vaadin-horizontal-layout>
+ 
       </vaadin-vertical-layout>
       
-    </div>
-    </center>
+            </vaadin-vertical-layout>
+      
+  
+    
+    
+      <style>
+ 
+  .block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40em;
+    height: 46em;
+    border-radius: var(--lumo-border-radius);
+    box-shadow: var(--lumo-box-shadow-s);
+    padding: var(--lumo-space-s);
+    
+  }
+  
+  
+</style>
 `;
     }
 

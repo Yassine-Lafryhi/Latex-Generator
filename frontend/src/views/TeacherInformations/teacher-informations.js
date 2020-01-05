@@ -12,42 +12,24 @@ class TeacherInformations extends PolymerElement {
     static get template() {
         return html`
  
-      <custom-style>
-        <style include="shared-styles">
-        h1 {
-    text-align: center;}
-          :host {
-              display: block;
-              padding: 1rem;
-          }
-        </style>
-      </custom-style>
+
 
        <vaadin-vertical-layout theme="padding" id="all" style=" width: 80em;
     height: 80em;">
  
       <vaadin-vertical-layout id="wrapper" theme="padding" class="block">
-       <h1>Teacher Informations</h1>
+       <h2>Teacher Informations</h2>
        <vaadin-form-layout>
        
        <vaadin-text-field label="First Name :" id="FirstName" clear-button-visible value="Value"></vaadin-text-field>
-       <br>
        <vaadin-text-field label="Last Name :" id="LastName" clear-button-visible value="Value"></vaadin-text-field>
-        <br>
        <vaadin-email-field label="Email :" id="Email" name="email" error-message="Please enter a valid email address" clear-button-visible></vaadin-email-field>
-<br>
 <vaadin-password-field label="Password :" id="NewPassword" placeholder="Enter password" value="secret1"></vaadin-password-field>
-<br>
 <vaadin-password-field label="Repeat Password :"  id="RepeatPassword" placeholder="Enter password" value="secret1"></vaadin-password-field>
 <vaadin-text-field label="University Name :" id="UniversityName" clear-button-visible value="Value"></vaadin-text-field>
 
 <vaadin-text-field label="Establishment Name :" id="EstablishmentName" clear-button-visible value="Value"></vaadin-text-field>
-       <br>
-       
-       
     
-      
-
        <vaadin-button id="Save" theme="success primary">Save</vaadin-button>
        
    
@@ -64,7 +46,7 @@ class TeacherInformations extends PolymerElement {
     align-items: center;
     justify-content: center;
     width: 40em;
-    height: 60em;
+    height: 42em;
     border-radius: var(--lumo-border-radius);
     box-shadow: var(--lumo-box-shadow-s);
     padding: var(--lumo-space-s);
