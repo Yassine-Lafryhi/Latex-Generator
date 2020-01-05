@@ -73,7 +73,7 @@ MongoCollection<Document> coll=db.getCollection(db_coll_name);
 ---
 * <strong style="color: dark ; opacity: 0.80">Finally we want say thank you to the one and only, our professor Mr BADDI YOUSSEF *Doctor Assistant in UCD* for his supporting  and encouraging to us, also for giving us this opportunity to improve our skills and to know new technologies as those giant ones that we worked on.
 
-*see also about* Mr [BADDI](https://http://baddiyoussef.com/)
+*see also about* Mr [BADDI](https://ma.linkedin.com/in/youssefbaddi/fr)
 </strong>
 > Created by :[name=LAFRYHI YASSINE ELMAJNI KHAOULA IMANE LAHLOU]
 [time=sun,2020,01,04][color=#EF0101]
