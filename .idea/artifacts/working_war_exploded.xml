@@ -83,7 +83,6 @@
         <element id="file-copy" path="$PROJECT_DIR$/target/working-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="working/web/Web" />
-      <element id="gwt-compiler-output" facet="working/gwt/GWT" />
     </root>
   </artifact>
 </component>

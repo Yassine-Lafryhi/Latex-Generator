@@ -123,6 +123,7 @@ public class MainView extends AppLayout {
         final List<Tab> tabs = new ArrayList<>();
         tabs.add(createTab("Teacher Informations", TeacherInformations.class));
         tabs.add(createTab("Latex Generator", LatexGenerator.class));
+        tabs.add(createTab("Add Exercice", AddExercise.class));
         return tabs.toArray(new Tab[tabs.size()]);
     }
 
