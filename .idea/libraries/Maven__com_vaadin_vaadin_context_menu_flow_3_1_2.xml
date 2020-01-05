@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.vaadin:vaadin-context-menu-flow:3.1.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-context-menu-flow/3.1.2/vaadin-context-menu-flow-3.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-context-menu-flow/3.1.2/vaadin-context-menu-flow-3.1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-context-menu-flow/3.1.2/vaadin-context-menu-flow-3.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
