@@ -57,7 +57,7 @@ class LatexGenerator extends PolymerElement {
     align-items: center;
     justify-content: center;
     width: 40em;
-    height: 46em;
+    height: 52em;
     border-radius: var(--lumo-border-radius);
     box-shadow: var(--lumo-box-shadow-s);
     padding: var(--lumo-space-s);
