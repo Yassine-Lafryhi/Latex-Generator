@@ -1,5 +1,3 @@
-# Latex-Generator
-A JAVA web application to generate EXAM/TP/TD in LATEX format
 # <strong style="color: blue; opacity: 0.80">**JAVA PROJECT**</strong> :mortar_board: 
 ## <span style="color:green "> 1.Project Presentation</span>
 * <strong style="color:dark">Our project is a LATEX GENERATOR that its specially role is generate an EXAM or TP or TD for a professor , To make his work less difficult and more effective to win time and organize work.
@@ -57,6 +55,7 @@ int port_no = 27017;
         DB database = mongoClient.getDB("ProjectDB");
 MongoCollection<Document> coll=db.getCollection(db_coll_name);
 ```
+---
 ![](https://i.imgur.com/u0VHhPj.jpg)
 
 
@@ -70,6 +69,7 @@ MongoCollection<Document> coll=db.getCollection(db_coll_name);
 
 ![](https://i.imgur.com/EhEKD5o.jpg)
 >Latex Generating form [color=#fd837b]
+
 ![](https://i.imgur.com/5firr6m.jpg)
 >Latex Generated form [color=#fd837b]
 ---
@@ -77,5 +77,6 @@ MongoCollection<Document> coll=db.getCollection(db_coll_name);
 
 *see also about* Mr [BADDI](https://ma.linkedin.com/in/youssefbaddi/fr)
 </strong>
+ 
 > Created by :[name=LAFRYHI YASSINE ELMAJNI KHAOULA IMANE LAHLOU]
 [time=sun,2020,01,04][color=#EF0101]
