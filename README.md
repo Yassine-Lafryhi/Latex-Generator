@@ -37,23 +37,27 @@ The important thing :mag:
 ```bash=
 mvn jetty:run
 ```
-###### <span style="color:green "> Connection between databse and java code </span>
+###### <strong style="color:green "> Connection between MongoDB and JAVA : </span>
 ```java=
-int port_no = 27017;
-        String host_name = "67.207.85.11", db_name =         "ProjectDB", db_coll_name = "Subjects";
-        MongoDatabase db;
-        // Mongodb connection string.
-        String client_url = "mongodb://" + host_name + ":" + port_no + "/" + db_name;
+package com.latex.generator.backend;
+
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoDatabase;
+
+public class Database {
+    public static MongoDatabase db = null;
+
+    public static void connect() {
+        int portNumber = 27017;
+        String hostName = "localhost", databaseName = "ProjectDB";
+        String client_url = "mongodb://" + hostName + ":" + portNumber + "/" + databaseName;
         MongoClientURI uri = new MongoClientURI(client_url);
-
-        // Connecting to the mongodb server using the given    client uri.
         MongoClient mongo_client = new MongoClient(uri);
-
-        // Fetching the database from the mongodb.
-        db = mongo_client.getDatabase(db_name);
-        [01:28, 05/01/2020] Khaoula ElMajni: MongoClient mongoClient = new MongoClient("67.207.85.11", 27017);
-        DB database = mongoClient.getDB("ProjectDB");
-MongoCollection<Document> coll=db.getCollection(db_coll_name);
+        db = mongo_client.getDatabase(databaseName);
+        while (db == null) ;
+    }
+}
 ```
 ---
 ![](https://i.imgur.com/u0VHhPj.jpg)
