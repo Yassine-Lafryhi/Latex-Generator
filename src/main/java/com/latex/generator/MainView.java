@@ -29,14 +29,10 @@ import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.bson.Document;
 
-/**
- * The main view is a top-level placeholder for other views.
- */
 @JsModule("./styles/shared-styles.js")
 @PWA(name = "Latex-Generator", shortName = "Latex-Generator")
 @Theme(value = Lumo.class, variant = Lumo.LIGHT)
 public class MainView extends AppLayout {
-
     private Tabs menu;
 
     public MainView() {
@@ -44,14 +40,8 @@ public class MainView extends AppLayout {
         Database.connect();
         menu = createMenuTabs();
         addToNavbar(menu);
-
-        //Notification.show(MD5("Admin@&2020"));
-        //LoginOverlay component = new LoginOverlay();
         LoginI18n i18n = LoginI18n.createDefault();
-
         LoginOverlay component = new LoginOverlay();
-
-
         LoginI18n.Form frm = new LoginI18n.Form();
         frm.setTitle("Log In");
         frm.setSubmit("Validate");
@@ -63,12 +53,11 @@ public class MainView extends AppLayout {
         hdr.setDescription("TP/TD/EXAM Generator In Latex Format");
         i18n.setForm(frm);
         i18n.setHeader(hdr);
-        i18n.setAdditionalInformation("Please use the following informations to log in :Email: baddi.y@ucd.ac.ma, Password: Admin@&2020");
+        i18n.setAdditionalInformation("Please use the following informations to log in: Email: baddi.y@ucd.ac.ma, Password: Admin@&2020");
         i18n.getErrorMessage().setTitle("Error while logging !");
         i18n.getErrorMessage().setMessage("The credentials are incorrect, please try again !");
         component.setI18n(i18n);
         component.addLoginListener(e -> {
-
             Notification.show(i18n.getForm().getPassword() + i18n.getForm().getUsername());
             FindIterable<Document> fi = Database.db.getCollection("Users").
                     find(Filters.eq("Email", e.getUsername()));
@@ -78,40 +67,22 @@ public class MainView extends AppLayout {
                     String password = cursor.next().getString("Password");
                     if (password.equals(MD5(e.getPassword()))) {
                         component.setOpened(false);
-
-
-                        // Retrieve the user preference node for the package com.mycompany
-
-
-                        prefs.put("TeacherEmail", e.getUsername());
-
-
                     } else {
                         component.setError(true);
                         component.setEnabled(true);
-                        //Notification.show("Error",2000, Notification.Position.BOTTOM_CENTER);
-                        //i18n.setForm(frm);
                     }
                 } else {
                     component.setError(true);
                     component.setEnabled(true);
-                    // Notification.show("Error",2000, Notification.Position.BOTTOM_CENTER);
-                    //i18n.setForm(frm);
                 }
             } finally {
                 cursor.close();
             }
-
-
         });
-        //component.setEnabled(true);
-        //component.setVisible(true);
         String TeacherEmail = prefs.get("TeacherEmail", "Undefined");
         if (TeacherEmail.equals("Undefined")) {
             component.setOpened(true);
         }
-
-
     }
 
     private static Tabs createMenuTabs() {
@@ -126,6 +97,7 @@ public class MainView extends AppLayout {
         tabs.add(createTab("1- Teacher Informations", TeacherInformations.class));
         tabs.add(createTab("2- Add Exercise", AddExercise.class));
         tabs.add(createTab("3- Latex Generator", LatexGenerator.class));
+        Database.connect();
         return tabs.toArray(new Tab[tabs.size()]);
     }
 
@@ -150,7 +122,6 @@ public class MainView extends AppLayout {
     protected void afterNavigation() {
         super.afterNavigation();
         selectTab();
-
     }
 
     private void selectTab() {
@@ -163,7 +134,6 @@ public class MainView extends AppLayout {
         }).findFirst();
         tabToSelect.ifPresent(tab -> menu.setSelectedTab((Tab) tab));
     }
-
 
     public String MD5(String md5) {
         try {

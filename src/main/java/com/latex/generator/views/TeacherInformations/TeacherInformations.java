@@ -72,13 +72,14 @@ public class TeacherInformations extends PolymerTemplate<TeacherInformations.For
     private PasswordField RepeatPassword;
 
     public TeacherInformations() {
-        Database.connect();
+        if (Database.db == null) {
+            Database.connect();
+        }
         Preferences prefs = Preferences.userNodeForPackage(MainView.class);
         teacherEmail = prefs.get("TeacherEmail", "Undefined");
 
         String db_coll_name = "Users";
 
-        Database.connect();
         MongoCollection<Document> col = Database.db.getCollection(db_coll_name);
         FindIterable<Document> fi = col.find(eq("Email", teacherEmail));
         MongoCursor<Document> cursor = fi.iterator();

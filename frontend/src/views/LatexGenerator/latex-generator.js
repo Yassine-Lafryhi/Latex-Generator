@@ -17,19 +17,22 @@ class LatexGenerator extends PolymerElement {
        <h2 style="text-align:center">Latex Generator</h2>
        <vaadin-form-layout style="text-align:center">
 
-    <vaadin-combo-box  label="Please select the school subject :"  id="combo" allow-custom-value></vaadin-combo-box>
+    <vaadin-combo-box required  label="Please select the school subject :"  id="SchoolSubject" allow-custom-value></vaadin-combo-box>
     
-     <vaadin-combo-box  label="Please select the test type :"  id="combobox" allow-custom-value></vaadin-combo-box>
+     <vaadin-combo-box  required label="Please select the test type :"  id="TestType" allow-custom-value></vaadin-combo-box>
 
-<vaadin-integer-field id="easy" min="0" max="10" label="How many easy exercises do you want :" has-controls></vaadin-integer-field>
-<vaadin-integer-field id="medium" min="0" max="10" label="How many medium exercises do you want :" has-controls></vaadin-integer-field>
-<vaadin-integer-field id="difficult" min="0" max="10" label="How many difficult exercises do you want :" has-controls></vaadin-integer-field>
+
+ <vaadin-text-field required autoselect label="Please enter the test title :" value="" id="TestTitle"></vaadin-text-field>
+
+<vaadin-integer-field required id="easy" min="0" max="10" label="How many easy exercises do you want :" has-controls></vaadin-integer-field>
+<vaadin-integer-field required id="medium" min="0" max="10" label="How many medium exercises do you want :" has-controls></vaadin-integer-field>
+<vaadin-integer-field required id="difficult" min="0" max="10" label="How many difficult exercises do you want :" has-controls></vaadin-integer-field>
 </vaadin-combo-box>
 
  
- <vaadin-text-field autoselect label="Please select the grade :" value="" id="niveau"></vaadin-text-field>
+ <vaadin-text-field  required autoselect label="Please enter the grade :" value="" id="Grade"></vaadin-text-field>
 
-  <vaadin-text-field autoselect label="Please select the test duration :" value="" id="duree"></vaadin-text-field>
+  <vaadin-text-field required autoselect label="Please enter the test duration :" value="" id="TestDuration"></vaadin-text-field>
 
 
   <vaadin-button id="GeneratePDF" theme="error primary">Generate PDF File</vaadin-button>

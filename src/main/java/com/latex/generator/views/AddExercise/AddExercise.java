@@ -51,6 +51,9 @@ public class AddExercise extends PolymerTemplate<AddExercise.FormViewModel> {
     private ComboBox<String> combobox;
 
     public AddExercise() {
+        if (Database.db == null) {
+            Database.connect();
+        }
         Preferences prefs = Preferences.userNodeForPackage(MainView.class);
         teacherEmail = prefs.get("TeacherEmail", "Undefined");
         ArrayList<String> level = new ArrayList<>();
@@ -59,14 +62,13 @@ public class AddExercise extends PolymerTemplate<AddExercise.FormViewModel> {
         level.add("Difficult");
         combobox.setItems(level);
         String db_coll_name = "Subjects";
-        Database.connect();
         MongoCollection<Document> coll = Database.db.getCollection(db_coll_name);
         getAllDocuments(coll);
         combo.setItems(names);
         combo.setValue(names.get(0));
         Add.addClickListener(e -> {
             textarea.getValue();
-            basicDBObject_Example(new MongoClient("67.207.85.11", 27017).getDB("ProjectDB").getCollection("Exercises"));
+            basicDBObject_Example(Database.db.getCollection("Exercises"));
             textarea.setValue("");
             Notification.show("THe exercise has been added successfully !", 2000, Notification.Position.BOTTOM_CENTER);
         });
@@ -84,11 +86,11 @@ public class AddExercise extends PolymerTemplate<AddExercise.FormViewModel> {
         }
     }
 
-    private void basicDBObject_Example(DBCollection collection) {
-        BasicDBObject document = new BasicDBObject();
+    private void basicDBObject_Example(MongoCollection<Document> collection) {
+        Document document = new Document();
         document.put("Content", textarea.getValue());
         document.put("Subject", combo.getValue());
         document.put("Difficulty", combobox.getValue());
-        collection.insert(document);
+        collection.insertOne(document);
     }
 }
