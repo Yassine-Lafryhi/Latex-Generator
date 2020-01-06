@@ -70,6 +70,8 @@ MongoCollection<Document> coll=db.getCollection(db_coll_name);
 
 ![](https://i.imgur.com/EhEKD5o.jpg)
 >Latex Generating form [color=#fd837b]
+![](https://i.imgur.com/5firr6m.jpg)
+>Latex Generated form [color=#fd837b]
 ---
 * <strong style="color: dark ; opacity: 0.80">Finally we want say thank you to the one and only, our professor Mr BADDI YOUSSEF *Doctor Assistant in UCD* for his supporting  and encouraging to us, also for giving us this opportunity to improve our skills and to know new technologies as those giant ones that we worked on.
 
