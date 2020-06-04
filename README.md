@@ -20,10 +20,10 @@ Also, the professor can add the exercises in database as he likes, he just need 
 
 ## Design & Analysis (UML)
 
-> Class Diagram :
+> Class Diagram :<br>
 ![](screenshots/screenshot1.png)
 
-> Use Case Diagram :
+> Use Case Diagram :<br>
 ![](screenshots/screenshot2.png)
 
  ---
