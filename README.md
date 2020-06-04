@@ -1,44 +1,47 @@
-# <strong style="color: blue; opacity: 0.80">**JAVA PROJECT**</strong> :mortar_board: 
-## <span style="color:green "> 1.Project Presentation :computer:</span>
-* <strong style="color:dark">Our project is a LATEX GENERATOR that its specially role is generate an EXAM or TP or TD for a professor , To make his work less difficult and more effective to win time and organize work.
-Also the Administrator can add the exercises in database as he likes, he just need to select the subject and the level of and the body of the exercise.
- ## <span style="color:green">2.Main Technologies Used</span>
- #### <span style="color:#0036ad"> 1.MONGODB: :point_down:</span>
- 
- * <strong style="color:dark">MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License (SSPL).
- *see also* [MONGODB](https://mongodb.com)
-#### <span style="color:#0036ad"> 2.JAVA ENTREPRISE EDITION: :point_down:</span>
+# Latex-Generator
+> A Java web application to generate EXAM/TP/TD in LATEX format
 
-* <strong style="color:dark">JEE or Java Enterprise Edition is a technology developed by Sun then Oracle for the development of distributed applications in Java. JEE is based on JSE (Java Standard Edition) and is intended for web platforms.
-*see also* [JEE](https://JEE.com)
-#### <span style="color:#0036ad"> 3.VAADIN: :point_down:</span>
-* <strong style="color:dark">Vaadin is an open-source platform for web application development. The Vaadin Platform includes a set of web components, a Java web framework, and a set of tools and application starters. Its flagship product, Vaadin Platform (previously Vaadin Framework) allows the implementation of HTML5 web user interfaces using the Java Programming Language.
-*see also* [VAADIN](https://vaadin.com)
-#### <span style="color:#0036ad"> 4.JETTY: :point_down:</span>
-* <strong style="color:dark">Eclipse Jetty provides a Web server and javax.servlet container, plus support for HTTP/2, WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations. These components are open source and available for commercial use and distribution.
-* <strong style="color:dark">Eclipse Jetty is used in a wide variety of projects and products, both in development and production. Jetty can be easily embedded in devices, tools, frameworks, application servers, and clusters. See the Jetty Powered page for more uses of Jetty.
-*see also* [JETTY](https://jetty.com)
-#### <span style="color:#0036ad"> 5.MAVEN: :point_down:</span>
-* <strong style="color:dark">Apache Maven (commonly known as Maven) is a production management and automation tool for Java software projects in general and Java EE in particular. It is used to automate continuous integration during software development. Maven is managed by the Apache Software Foundation organization. The tool was previously a branch of the Jakarta Project organization.
-* <strong style="color:dark">The objective is to produce software from its sources, optimizing the tasks carried out for this purpose and guaranteeing the correct manufacturing order.
-*see also* [MAVEN]( http://maven.apache.org)
- ## <span style="color:green ">3.CONCEPTION & ANALYSES</span>
-* ###### <strong style="color:orange; opacity: 0.80">UML</strong>
+![](https://img.shields.io/badge/build-passing-brightgreen)
+![](https://img.shields.io/badge/license-MIT-purple)
+![](https://img.shields.io/badge/version-1.0-orange)
+![](https://img.shields.io/badge/vaadin-14.1.3-blue)
+![](https://img.shields.io/badge/jackson-2.10.0-red)
+
+## Project Presentation
+This project is a LATEX GENERATOR that its specially role is generate an EXAM or TP or TD for a professor , To make his work less difficult and more effective to win time and organize work.
+Also, the professor can add the exercises in database as he likes, he just need to select the subject and the level of and the body of the exercise.
+## Built With
+
+* [Vaadin](https://vaadin.com)
+* [MongoDB](https://mongodb.com)
+* [Jetty](https://www.eclipse.org/jetty)
+* [Maven](https://maven.apache.org)
+
+## Design & Analysis
+>UML
+>> Class Diagram :
 ![](https://i.imgur.com/u06rV0F.png)
-> Classe Diagramm [color=#fd837b]
-
+>> Use Case Diagram :
 ![](https://i.imgur.com/IAoVeTk.png)
-> Use Case Diagramm [color=#fd837b]
+
  ---
-## <strong style="color: blue; opacity: 0.80" >HOW TO RUN IT?:zap:   </strong>
-:::info
-The important thing :mag: 
-:::
-```bash=
-mvn jetty:run
+## Prerequisites
+
+- Install maven :
+> On MAC OS using [Homebrew](https://brew.sh/) :
+```shell
+brew install maven
 ```
-###### <strong style="color:green "> Connection between MongoDB and JAVA : </span>
-```java=
+> On Linux (Ubuntu) :
+```shell
+sudo apt install maven
+```
+> On Windows using [Chocolatey](https://chocolatey.org/) :
+```shell
+choco install maven
+```
+- Configure MongoDB server :
+```java
 package com.latex.generator.backend;
 
 import com.mongodb.MongoClient;
@@ -59,28 +62,44 @@ public class Database {
     }
 }
 ```
+## How to run it
+
+```bash
+mvn jetty:run
+```
 ---
+## Screenshots
+>Login :
 ![](https://i.imgur.com/u0VHhPj.jpg)
-
-
->Login Form [color=#fd837b]
-
+>Create an account :
 ![](https://i.imgur.com/Sn6DxE7.jpg)
->Creating an account form [color=#fd837b]
-
+>Add an exercise :
 ![](https://i.imgur.com/NPMguLw.jpg)
->Adding an exercise form [color=#fd837b]
-
+>Generate Latex or PDF file :
 ![](https://i.imgur.com/EhEKD5o.jpg)
->Latex Generating form [color=#fd837b]
-
+>Example of a generated exam :
 ![](https://i.imgur.com/5firr6m.jpg)
->Latex Generated form [color=#fd837b]
----
-* <strong style="color: dark ; opacity: 0.80">:pray: Finally we want say thank you to the one and only, our professor Mr BADDI YOUSSEF *Doctor Assistant in UCD* for his supporting  and encouraging to us, also for giving us this opportunity to improve our skills and to know new technologies as those giant ones that we worked on.
 
-*see also about* Mr [BADDI](https://ma.linkedin.com/in/youssefbaddi/fr)
-</strong>
- 
-> Created by :[name=LAFRYHI YASSINE ELMAJNI KHAOULA IMANE LAHLOU]
-[time=sun,2020,01,04][color=#EF0101]
+---
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+[MIT License](https://choosealicense.com/licenses/mit/)
+
+## Thanks 
+:pray: Finally, we want say thank you to the one and only, our teacher [Mr BADDI YOUSSEF](https://linkedin.com/in/youssefbaddi) Assistant Doctor in UCD (CHOUAIB DOUKKALI University, ElJadida, Moroco) for his supervising and supporting, also for giving us this opportunity to improve our skills and know new technologies.
+
+## Contact
+- Imane Lahlou - [imanelahlou2000@gmail.com](mailto:imanelahlou2000@gmail.com)
+- Khaoula El Majni - [elmajnikhaoula99@gmail.com](mailto:elmajnikhaoula99@gmail.com)
+- Yassine Lafryhi - [y.lafryhi@gmail.com](mailto:y.lafryhi@gmail.com)
+- Project Link : [https://github.com/Yassine-Lafryhi/Latex-Generator](https://github.com/Yassine-Lafryhi/Latex-Generator)
