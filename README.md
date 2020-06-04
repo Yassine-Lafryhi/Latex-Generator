@@ -8,12 +8,13 @@
 ![](https://img.shields.io/badge/jackson-2.10.0-red)
 
 ## Project Presentation
-This project is a LATEX GENERATOR that its specially role is generate an EXAM or TP or TD for a professor , To make his work less difficult and more effective to win time and organize work.
-Also, the professor can add the exercises in database as he likes, he just need to select the subject and the level of and the body of the exercise.
+This project is a Latex Generator that its specially role is to generate an EXAM or TP or TD for a professor , To make his tasks less difficult and more effective to win time and organize work.
+Also, the professor can add the exercises in database as he likes, he just need to select the subject and the level then the body of the exercise.
 ## Built With
 
 * [Vaadin](https://vaadin.com)
 * [MongoDB](https://mongodb.com)
+* [Jackson](https://github.com/FasterXML/jackson-core)
 * [Jetty](https://www.eclipse.org/jetty)
 * [Maven](https://maven.apache.org)
 
