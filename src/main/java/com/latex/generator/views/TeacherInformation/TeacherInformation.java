@@ -1,24 +1,17 @@
-package com.latex.generator.views.TeacherInformations;
+package com.latex.generator.views.TeacherInformation;
 
 import com.latex.generator.backend.Database;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
-import com.mongodb.client.model.Filters;
 import com.vaadin.flow.component.*;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.PasswordField;
-import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -33,12 +26,12 @@ import java.util.prefs.Preferences;
 
 import static com.mongodb.client.model.Filters.eq;
 
-@Route(value = "Teacher-Informations", layout = MainView.class)
+@Route(value = "Teacher-Information", layout = MainView.class)
 @RouteAlias(value = "", layout = MainView.class)
-@PageTitle("Teacher-Informations")
-@JsModule("src/views/TeacherInformations/teacher-informations.js")
-@Tag("Teacher-Informations")
-public class TeacherInformations extends PolymerTemplate<TeacherInformations.FormViewModel> {
+@PageTitle("Teacher-Information")
+@JsModule("src/views/TeacherInformation/teacher-information.js")
+@Tag("Teacher-Information")
+public class TeacherInformation extends PolymerTemplate<TeacherInformation.FormViewModel> {
     ArrayList<String> names = new ArrayList<>();
     String teacherEmail = "";
 
@@ -71,7 +64,7 @@ public class TeacherInformations extends PolymerTemplate<TeacherInformations.For
     @Id
     private PasswordField RepeatPassword;
 
-    public TeacherInformations() {
+    public TeacherInformation() {
         if (Database.db == null) {
             Database.connect();
         }
@@ -96,7 +89,7 @@ public class TeacherInformations extends PolymerTemplate<TeacherInformations.For
 
         Save.addClickListener(e -> {
 
-            updateTeacherInformations(Database.db.getCollection("Users"));
+            updateTeacherInformation(Database.db.getCollection("Users"));
 
 
         });
@@ -104,14 +97,14 @@ public class TeacherInformations extends PolymerTemplate<TeacherInformations.For
 
     }
 
-    private void updateTeacherInformations(MongoCollection<Document> collection) {
+    private void updateTeacherInformation(MongoCollection<Document> collection) {
 
         collection.updateOne(eq("Email", teacherEmail), new Document("$set", new Document("FirstName", FirstName.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("LastName", LastName.getValue()));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set",  new Document("Email",  Email.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set", new Document("UniversityName", UniversityName.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set",   new Document("EstablishmentName",EstablishmentName.getValue())));
-        Notification.show("The teacher informations has been updated successfully !", 2000, Notification.Position.BOTTOM_CENTER);
+        Notification.show("The teacher information has been updated successfully !", 2000, Notification.Position.BOTTOM_CENTER);
 
     }
 

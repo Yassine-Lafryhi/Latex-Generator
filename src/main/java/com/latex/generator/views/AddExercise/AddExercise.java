@@ -2,9 +2,6 @@ package com.latex.generator.views.AddExercise;
 
 import com.latex.generator.MainView;
 import com.latex.generator.backend.Database;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCollection;
-import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;

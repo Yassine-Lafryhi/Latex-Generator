@@ -8,7 +8,7 @@ import '@vaadin/vaadin-button/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/vaadin-vertical-layout.js';
 
-class TeacherInformations extends PolymerElement {
+class TeacherInformation extends PolymerElement {
     static get template() {
         return html`
  
@@ -18,7 +18,7 @@ class TeacherInformations extends PolymerElement {
     height: 80em;">
  
       <vaadin-vertical-layout id="wrapper" theme="padding" class="block">
-       <h2>Teacher Informations</h2>
+       <h2>Teacher Information</h2>
        <vaadin-form-layout>
        
        <vaadin-text-field label="First Name :" id="FirstName" clear-button-visible value="Value"></vaadin-text-field>
@@ -59,7 +59,7 @@ class TeacherInformations extends PolymerElement {
     }
 
     static get is() {
-        return 'teacher-informations';
+        return 'teacher-information';
     }
 
     static get properties() {
@@ -69,4 +69,4 @@ class TeacherInformations extends PolymerElement {
     }
 }
 
-customElements.define(TeacherInformations.is, TeacherInformations);
+customElements.define(TeacherInformation.is, TeacherInformation);

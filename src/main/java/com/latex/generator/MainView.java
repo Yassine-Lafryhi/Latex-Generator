@@ -8,7 +8,7 @@ import java.util.prefs.Preferences;
 import com.latex.generator.backend.Database;
 import com.latex.generator.views.AddExercise.AddExercise;
 import com.latex.generator.views.LatexGenerator.LatexGenerator;
-import com.latex.generator.views.TeacherInformations.TeacherInformations;
+import com.latex.generator.views.TeacherInformation.TeacherInformation;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
@@ -53,7 +53,7 @@ public class MainView extends AppLayout {
         hdr.setDescription("TP/TD/EXAM Generator In Latex Format");
         i18n.setForm(frm);
         i18n.setHeader(hdr);
-        i18n.setAdditionalInformation("Please use the following informations to log in: Email: baddi.y@ucd.ac.ma, Password: Admin@&2020");
+        i18n.setAdditionalInformation("Please use the following information to log in: Email: baddi.y@ucd.ac.ma, Password: Admin@&2020");
         i18n.getErrorMessage().setTitle("Error while logging !");
         i18n.getErrorMessage().setMessage("The credentials are incorrect, please try again !");
         component.setI18n(i18n);
@@ -94,7 +94,7 @@ public class MainView extends AppLayout {
 
     private static Tab[] getAvailableTabs() {
         final List<Tab> tabs = new ArrayList<>();
-        tabs.add(createTab("1- Teacher Informations", TeacherInformations.class));
+        tabs.add(createTab("1- Teacher Information", TeacherInformation.class));
         tabs.add(createTab("2- Add Exercise", AddExercise.class));
         tabs.add(createTab("3- Latex Generator", LatexGenerator.class));
         Database.connect();
