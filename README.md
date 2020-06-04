@@ -20,9 +20,9 @@ Also, the professor can add the exercises in database as he likes, he just need 
 ## Design & Analysis
 >UML
 >> Class Diagram :
-![](https://i.imgur.com/u06rV0F.png)
+![](screenshots/screenshot1.png)
 >> Use Case Diagram :
-![](https://i.imgur.com/IAoVeTk.png)
+![](screenshots/screenshot2.png)
 
  ---
 ## Prerequisites
@@ -70,15 +70,15 @@ mvn jetty:run
 ---
 ## Screenshots
 >Login :
-![](https://i.imgur.com/u0VHhPj.jpg)
+![](screenshots/screenshot3.jpeg)
 >Create an account :
-![](https://i.imgur.com/Sn6DxE7.jpg)
+![](screenshots/screenshot4.jpeg)
 >Add an exercise :
-![](https://i.imgur.com/NPMguLw.jpg)
+![](screenshots/screenshot5.jpeg)
 >Generate Latex or PDF file :
-![](https://i.imgur.com/EhEKD5o.jpg)
+![](screenshots/screenshot6.jpeg)
 >Example of a generated exam :
-![](https://i.imgur.com/5firr6m.jpg)
+![](screenshots/screenshot7.jpeg)
 
 ---
 
