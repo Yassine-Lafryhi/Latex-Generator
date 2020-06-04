@@ -18,11 +18,12 @@ Also, the professor can add the exercises in database as he likes, he just need 
 * [Jetty](https://www.eclipse.org/jetty)
 * [Maven](https://maven.apache.org)
 
-## Design & Analysis
->UML
->> Class Diagram :
+## Design & Analysis (UML)
+
+> Class Diagram :
 ![](screenshots/screenshot1.png)
->> Use Case Diagram :
+
+> Use Case Diagram :
 ![](screenshots/screenshot2.png)
 
  ---
@@ -72,12 +73,16 @@ mvn jetty:run
 ## Screenshots
 >Login :
 ![](screenshots/screenshot3.jpeg)
+
 >Create an account :
 ![](screenshots/screenshot4.jpeg)
+
 >Add an exercise :
 ![](screenshots/screenshot5.jpeg)
+
 >Generate Latex or PDF file :
 ![](screenshots/screenshot6.jpeg)
+
 >Example of a generated exam :
 ![](screenshots/screenshot7.jpeg)
 
