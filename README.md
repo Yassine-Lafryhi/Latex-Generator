@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/build-passing-brightgreen)
 ![](https://img.shields.io/badge/license-MIT-purple)
 ![](https://img.shields.io/badge/version-1.0-orange)
-![](https://img.shields.io/badge/vaadin-14.1.3-blue)
+![](https://img.shields.io/badge/vaadin-14.3.9-blue)
 ![](https://img.shields.io/badge/jackson-2.10.0-red)
 
 ## Project Presentation
@@ -55,7 +55,7 @@ public class Database {
 
     public static void connect() {
         int portNumber = 27017;
-        String hostName = "localhost", databaseName = "ProjectDB";
+        String hostName = "localhost", databaseName = "LatexGenerator";
         String client_url = "mongodb://" + hostName + ":" + portNumber + "/" + databaseName;
         MongoClientURI uri = new MongoClientURI(client_url);
         MongoClient mongo_client = new MongoClient(uri);
@@ -63,6 +63,24 @@ public class Database {
         while (db == null) ;
     }
 }
+```
+- Create Database & Collections :
+```bash
+use LatexGenerator
+
+db.Users.insert({
+    "FirstName" : "Youssef",
+    "LastName" : "Baddi",
+    "Email" : "baddi.y@ucd.ac.ma",
+    "Password" : "Admin@&2020",
+    "UniversityName" : "UCD",
+    "EstablishmentName" : "ESTSB",
+})
+
+db.Subjects.insert({
+    "Email" : "baddi.y@ucd.ac.ma",
+    "Name" : "POO JAVA"
+})
 ```
 ## How to run it
 
