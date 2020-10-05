@@ -100,7 +100,7 @@ public class TeacherInformation extends PolymerTemplate<TeacherInformation.FormV
     private void updateTeacherInformation(MongoCollection<Document> collection) {
 
         collection.updateOne(eq("Email", teacherEmail), new Document("$set", new Document("FirstName", FirstName.getValue())));
-        collection.updateOne(eq("Email", teacherEmail), new Document("LastName", LastName.getValue()));
+        collection.updateOne(eq("Email", teacherEmail), new Document("$set",  new Document("LastName",  Email.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set",  new Document("Email",  Email.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set", new Document("UniversityName", UniversityName.getValue())));
         collection.updateOne(eq("Email", teacherEmail), new Document("$set",   new Document("EstablishmentName",EstablishmentName.getValue())));

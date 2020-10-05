@@ -9,7 +9,7 @@ public class Database {
 
     public static void connect() {
         int portNumber = 27017;
-        String hostName = "localhost", databaseName = "ProjectDB";
+        String hostName = "localhost", databaseName = "LatexGenerator";
         String client_url = "mongodb://" + hostName + ":" + portNumber + "/" + databaseName;
         MongoClientURI uri = new MongoClientURI(client_url);
         MongoClient mongo_client = new MongoClient(uri);
