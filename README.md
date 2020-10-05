@@ -72,7 +72,7 @@ db.Users.insert({
     "FirstName" : "Youssef",
     "LastName" : "Baddi",
     "Email" : "baddi.y@ucd.ac.ma",
-    "Password" : "Admin@&2020",
+    "Password" : "7dd6d2220b0c9be4da3a4967c4af7aa4",
     "UniversityName" : "UCD",
     "EstablishmentName" : "ESTSB",
 })
